@@ -16,9 +16,9 @@ import br.com.miguel.model.Livro;
  */
 @Stateless
 @LocalBean
-@PersistenceContext(unitName = "LivrariaEJB")
 public class LivroEJB implements LivroEJBRemote, LivroEJBLocal
 {
+	@PersistenceContext(unitName = "LivrariaEJB")
 	private EntityManager gerenciador;
 	
 	public LivroEJB()
