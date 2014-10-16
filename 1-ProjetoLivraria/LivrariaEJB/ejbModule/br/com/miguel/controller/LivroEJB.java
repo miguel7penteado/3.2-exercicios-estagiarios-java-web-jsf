@@ -10,7 +10,6 @@ import javax.persistence.TypedQuery;
 
 import br.com.miguel.model.Livro;
 
-
 /**
  * Session Bean implementation class LivroEJB
  */
@@ -20,34 +19,35 @@ public class LivroEJB implements LivroEJBRemote, LivroEJBLocal
 {
 	@PersistenceContext(unitName = "LivrariaEJB")
 	private EntityManager gerenciador;
-	
+
 	public LivroEJB()
 	{
-		
+
 	}
-	
+
 	public List<Livro> localizaLivros()
 	{
-		TypedQuery<Livro> consulta = gerenciador.createNamedQuery("localizaTodosLivros",Livro.class);
+		TypedQuery<Livro> consulta = gerenciador.createNamedQuery(
+				"localizaTodosLivros", Livro.class);
 		return consulta.getResultList();
 	}
-	
+
 	public Livro localizaLivroPorID(Long id)
 	{
-		return gerenciador.find(Livro.class,id);
+		return gerenciador.find(Livro.class, id);
 	}
-	
+
 	public Livro criaLivro(Livro livro)
 	{
 		gerenciador.persist(livro);
-		return(livro);
+		return (livro);
 	}
-	
+
 	public void apagaLivro(Livro livro)
 	{
-		gerenciador.remove(gerenciador.merge(livro));		
+		gerenciador.remove(gerenciador.merge(livro));
 	}
-	
+
 	public Livro atualizaLivro(Livro livro)
 	{
 		return gerenciador.merge(livro);

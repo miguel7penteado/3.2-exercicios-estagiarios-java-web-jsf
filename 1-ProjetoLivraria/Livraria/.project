@@ -3,9 +3,9 @@
 	<name>Livraria</name>
 	<comment></comment>
 	<projects>
-		<project>LivrariaWeb</project>
 		<project>LivrariaEJB</project>
 		<project>LivrariaClient</project>
+		<project>LivrariaWeb</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
