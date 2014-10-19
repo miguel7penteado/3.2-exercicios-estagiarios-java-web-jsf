@@ -11,7 +11,7 @@ import javax.inject.Named;
 import br.com.miguel.controller.LivroEJB;
 import br.com.miguel.model.Livro;
 
-@Named("ObejtoLivraria")
+@Named("ObjetoLivraria")
 @RequestScoped
 public class LivrariaCliente
 {

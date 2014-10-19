@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<h:body> 
+	
+	<h:form>
+		<h:panelGrid columns="2">
+		
+			<h:outputLabel value="ISBN : " /> <h:inputText value="#{ObjetoLivraria.livro.isbn}" />
+			<h:outputLabel value="Título : " /> <h:inputText value="#{ObjetoLivraria.livro.titulo}" />
+			<h:outputLabel value="Preço: " /> <h:inputText value="#{ObjetoLivraria.livro.preco}" />
+			<h:outputLabel value="Descrição : " /> <h:inputText value="#{ObjetoLivraria.livro.descricao}" cols="20" rows="5"/>
+			<h:outputLabel value="Número de Páginas: " /> <h:inputText value="#{ObjetoLivraria.livro.numeroPaginas}" />
+			<h:outputLabel value="Ilustrado ? " /><h:selectBooleanCheckbox value="#{ObjetoLivraria.livro.ilustrado}" />			
+			
+		</h:panelGrid>
+		<h:commandButton value="Cadastrar" action="#{ObjetoLivraria.criaLivro}"/>		
+	</h:form>
+	<hr/>
+	<i>Aprendendo J2EE</i>	
+</h:body> 
+</html>
