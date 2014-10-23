@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head><title>Pesquisa de Livros</title></h:head> 
+<h:body> 
+<h1>Lista de Livros da biblioteca:</h1>
+<hr/>
+
+<h:dataTable value="#{ObjetoLivraria.listaLivros}" var="bk">
+
+	<h:column>
+		<f:facet name="header"><h:outputText value="ISBN"/></f:facet>
+		<h:outputText value="#{bk.isbn}"/>
+	</h:column>
+	
+	<h:column>
+		<f:facet name="header"><h:outputText value="Titulo"/></f:facet>
+		<h:outputText value="#{bk.titulo}"/>
+	</h:column>
+	
+	<h:column>
+		<f:facet name="header"><h:outputText value="Preço"/></f:facet>
+		<h:outputText value="#{bk.preco}"/>
+	</h:column>
+
+	<h:column>
+		<f:facet name="header"><h:outputText value="Páginas"/></f:facet>
+		<h:outputText value="#{bk.numeroPaginas}"/>
+	</h:column>
+		
+</h:dataTable>
+
+<h:form>
+	<h:link outcome="novoLivro.xhtml" value="Inserir novo livro." />	
+</h:form>
+<hr/>
+<i>Aprendendo J2EE</i>	
+
+
+</h:body> 
+</html>
