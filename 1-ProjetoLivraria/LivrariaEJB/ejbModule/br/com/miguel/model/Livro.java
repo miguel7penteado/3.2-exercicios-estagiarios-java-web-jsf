@@ -3,14 +3,13 @@ package br.com.miguel.model;
 import java.io.Serializable;
 import javax.persistence.*;
 
-
 /**
  * The persistent class for the livros database table.
  * 
  */
 @Entity
-@Table(name="livros")
-@NamedQuery(name="Livro.localizaTodosLivros", query="SELECT l FROM Livro l")
+@Table(name = "livros")
+@NamedQuery(name = "localizaTodosLivros", query = "SELECT l FROM Livro l")
 public class Livro implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int id;
@@ -24,10 +23,9 @@ public class Livro implements Serializable {
 	public Livro() {
 	}
 
-
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(unique=true, nullable=false)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(unique = true, nullable = false)
 	public int getId() {
 		return this.id;
 	}
@@ -36,8 +34,7 @@ public class Livro implements Serializable {
 		this.id = id;
 	}
 
-
-	@Column(length=200)
+	@Column(length = 200)
 	public String getDescricao() {
 		return this.descricao;
 	}
@@ -45,7 +42,6 @@ public class Livro implements Serializable {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-
 
 	public boolean getIlustrado() {
 		return this.ilustrado;
@@ -55,8 +51,7 @@ public class Livro implements Serializable {
 		this.ilustrado = ilustrado;
 	}
 
-
-	@Column(length=200)
+	@Column(length = 200)
 	public String getIsbn() {
 		return this.isbn;
 	}
@@ -64,7 +59,6 @@ public class Livro implements Serializable {
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
-
 
 	public Integer getNumeropaginas() {
 		return this.numeropaginas;
@@ -74,7 +68,6 @@ public class Livro implements Serializable {
 		this.numeropaginas = numeropaginas;
 	}
 
-
 	public double getPreco() {
 		return this.preco;
 	}
@@ -83,8 +76,7 @@ public class Livro implements Serializable {
 		this.preco = preco;
 	}
 
-
-	@Column(length=200)
+	@Column(length = 200)
 	public String getTitulo() {
 		return this.titulo;
 	}

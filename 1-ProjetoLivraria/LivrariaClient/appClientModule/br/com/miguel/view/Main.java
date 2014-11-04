@@ -20,14 +20,14 @@ public class Main
 	public static void main(String[] args)
 	{
 		Livro livro = new Livro();
-		livro.setTitulo("Os Guardiões da Galáxia");
+		livro.setTitulo("Os Guardiï¿½es da Galï¿½xia");
 		livro.setPreco(110.0);
 		livro.setDescricao("Historia da Marvel");
 		livro.setIsbn("N/A");
-		livro.setNumeroPaginas(37);
+		livro.setNumeropaginas(37);
 		livro.setIlustrado(true);
 		livroEJB.criaLivro(livro);
-		livro.setTitulo("Os Guardiões da Galáxia vs Skrulls");
+		livro.setTitulo("Os Guardiï¿½es da Galï¿½xia vs Skrulls");
 		livroEJB.atualizaLivro(livro);
 	}
 }
