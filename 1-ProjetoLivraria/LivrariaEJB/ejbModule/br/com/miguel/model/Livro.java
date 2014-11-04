@@ -17,7 +17,7 @@ public class Livro implements Serializable {
 	private String descricao;
 	private boolean ilustrado;
 	private String isbn;
-	private int numeroPaginas;
+	private Integer numeropaginas;
 	private double preco;
 	private String titulo;
 
@@ -27,6 +27,7 @@ public class Livro implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
 	public int getId() {
 		return this.id;
 	}
@@ -36,6 +37,7 @@ public class Livro implements Serializable {
 	}
 
 
+	@Column(length=200)
 	public String getDescricao() {
 		return this.descricao;
 	}
@@ -54,6 +56,7 @@ public class Livro implements Serializable {
 	}
 
 
+	@Column(length=200)
 	public String getIsbn() {
 		return this.isbn;
 	}
@@ -63,13 +66,12 @@ public class Livro implements Serializable {
 	}
 
 
-	@Column(name="numero_paginas")
-	public int getNumeroPaginas() {
-		return this.numeroPaginas;
+	public Integer getNumeropaginas() {
+		return this.numeropaginas;
 	}
 
-	public void setNumeroPaginas(int numeroPaginas) {
-		this.numeroPaginas = numeroPaginas;
+	public void setNumeropaginas(Integer numeropaginas) {
+		this.numeropaginas = numeropaginas;
 	}
 
 
@@ -82,6 +84,7 @@ public class Livro implements Serializable {
 	}
 
 
+	@Column(length=200)
 	public String getTitulo() {
 		return this.titulo;
 	}
